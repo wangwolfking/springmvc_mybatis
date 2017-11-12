@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
 encoding//properties/jdbc.properties=UTF-8
 encoding//properties/log4j.properties=UTF-8
+encoding//properties/mysqldb.properties=UTF-8
