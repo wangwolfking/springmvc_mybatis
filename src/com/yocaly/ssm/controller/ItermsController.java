@@ -18,7 +18,7 @@ public class ItermsController {
 
 	// 商品的查询
 	@RequestMapping("/queryItems.action")
-	public ModelAndView queryIems() throws Exception {
+	public ModelAndView queryItems() throws Exception {
 		// TODO Auto-generated method stub
 		List<ItemsCustomer> itemsList = itemsService.findItemsList(null);
 		
