@@ -1,4 +1,4 @@
-package com.yocaly.ssm.contrller;
+package com.yocaly.ssm.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,13 +8,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.yocaly.ssm.model.Items;
 import com.yocaly.ssm.model.ItemsCustomer;
 import com.yocaly.ssm.service.ItemsService;
 
 @Controller
 public class ItermsController {
-	@Autowired
+//	@Autowired
 	private ItemsService itemsService;
 
 	// 商品的查询

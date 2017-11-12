@@ -13,7 +13,6 @@ public class ItemsServiceImpl implements ItemsService {
 	@Autowired
 	private ItemsMapperCustom itemsMapperCustom;
 
-	@Override
 	public List<ItemsCustomer> findItemsList(ItemsQueryVo itemsqueryVo) throws Exception {
 		// 通过ItemsMapperCustom查询数据库
 		return itemsMapperCustom.findItemsList(itemsqueryVo);

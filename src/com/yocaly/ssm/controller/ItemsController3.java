@@ -1,4 +1,4 @@
-package com.yocaly.ssm.contrller;
+package com.yocaly.ssm.controller;
 
 import java.util.ArrayList;
 import java.util.List;

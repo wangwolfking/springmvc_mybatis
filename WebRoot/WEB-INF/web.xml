@@ -4,26 +4,35 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 	<display-name>springmvc_mybatis</display-name>
+	<!-- 加载spring 配置文件 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext-*.xml</param-value>
+	</context-param>
+	<!-- 加载spring 监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 	<!--例:编码过滤器 -->
 	<!-- 用来声明filter的相关设定,过滤器可以截取和修改一个Servlet或JSP页面的请求或从一个Servlet或JSP页面发出的响应 -->
 	<filter>
-		<!-- 指定filter的名字  -->
+		<!-- 指定filter的名字 -->
 		<filter-name>encodingFilter</filter-name>
-		<!-- 定义filter的类的名称  -->
+		<!-- 定义filter的类的名称 -->
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
-		<!-- 设置是否启用异步支持  -->
+		<!-- 设置是否启用异步支持 -->
 		<async-supported>true</async-supported>
 		<!-- 用来定义参数,若在Servlet可以使用下列方法来获得:String param_name=getServletContext().getInitParamter("param-name里面的值"); -->
 		<init-param>
-			<!-- 参数名称  -->
+			<!-- 参数名称 -->
 			<param-name>encoding</param-name>
-			<!-- 参数值  -->
+			<!-- 参数值 -->
 			<param-value>UTF-8</param-value>
 		</init-param>
 	</filter>
 	<!-- 用来定义filter所对应的URL -->
 	<filter-mapping>
-		<!-- 指定对应filter的名字  -->
+		<!-- 指定对应filter的名字 -->
 		<filter-name>encodingFilter</filter-name>
 		<!-- 指定filter所对应的URL -->
 		<url-pattern>/*</url-pattern>

@@ -16,7 +16,7 @@
 			http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
 	<!-- 可以扫描controller，service，..... -->
-	<context:component-scan base-package="com.yocaly.ssm.contrller"></context:component-scan>
+	<context:component-scan base-package="com.yocaly.ssm.controller"></context:component-scan>
 	<mvc:annotation-driven></mvc:annotation-driven>
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
