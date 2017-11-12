@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yocaly.ssm.mapper.ItemsMapperCustom">
+	<!-- 定义商品查询的sql片段，就是商品的查询条件 -->
+	<sql id="items_query_where">
+		<!-- 使用动态sql，用if判断，满足条件的进行拼接 -->
+		<!-- 商品的查询条件通过ItemsQueryVo包装的对象ItemsCustomer属性传递 -->
+		<if test="ItemsCustomer!=null">
+			<if test="ItemsCustomer.name!=null and ItemsCustomer.name!=''">
+				items.name LIKE '%${ItemsCustomer.name}%'
+			</if>
+		</if>
+
+	</sql>
+	<!-- 商品列表查询 -->
+	<!-- parameterType传入包装对象（包装了查询条件） -->
+	<!-- resultType建议使用扩展对象 -->
+	<select id="findItemsList" parameterType="com.yocaly.ssm.model.ItemsQueryVo"
+		resultType="com.yocaly.ssm.model.ItemsCustomer">
+		SELECT *
+		FROM items
+		<where>
+			<include refid="items_query_where"></include>
+		</where>
+		<!-- <where> items.name LIKE '%笔记本%'</where> -->
+	</select>
+</mapper>
