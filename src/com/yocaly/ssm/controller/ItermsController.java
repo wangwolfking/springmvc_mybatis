@@ -13,7 +13,7 @@ import com.yocaly.ssm.service.ItemsService;
 
 @Controller
 public class ItermsController {
-//	@Autowired
+	@Autowired
 	private ItemsService itemsService;
 
 	// 商品的查询
