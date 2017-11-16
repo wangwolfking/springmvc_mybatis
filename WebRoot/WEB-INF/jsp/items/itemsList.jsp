@@ -9,6 +9,9 @@
 <title>商品查询列表</title>
 </head>
 <body>
+<form action="queryItems.action" method="post" title="qqqqq" enctype="application/x-www-form-urlencoded">
+
+<input type="submit" value="123"></form>
 	<table with="100%" border="1">
 		<tr>
 			<td>名称</td>
