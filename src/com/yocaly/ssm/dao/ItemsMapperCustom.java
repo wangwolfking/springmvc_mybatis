@@ -1,4 +1,4 @@
-package com.yocaly.ssm.mapper;
+package com.yocaly.ssm.dao;
 
 import java.util.List;
 

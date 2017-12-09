@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.yocaly.ssm.mapper.ItemsMapperCustom;
+import com.yocaly.ssm.dao.ItemsMapperCustom;
 import com.yocaly.ssm.model.ItemsCustomer;
 import com.yocaly.ssm.model.ItemsQueryVo;
 import com.yocaly.ssm.service.ItemsService;

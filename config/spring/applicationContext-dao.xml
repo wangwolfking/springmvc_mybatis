@@ -37,12 +37,12 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:mybatis/sqlMapConfig.xml" />
 		<!-- 自动扫描mapping.xml文件 -->
-		<!-- <property name="mapperLocations" value="classpath:cn/fisher/webchat/user/data/map/*.xml"></property> -->
+		<property name="mapperLocations" value="classpath:com/yocaly/ssm/mapper/*.xml"></property> 
 	</bean>
 	<!-- mapper扫描器 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<!-- basePackage 属性是让你为映射器接口文件设置基本的包路径。 你可以使用分号或逗号 作为分隔符设置多于一个的包路径。每个映射器将会在指定的包路径中递归地被搜索到 -->
-		<property name="basePackage" value="com.yocaly.ssm.mapper" />
+		<property name="basePackage" value="com.yocaly.ssm.dao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 </beans>
