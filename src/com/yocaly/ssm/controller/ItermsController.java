@@ -96,9 +96,8 @@ public class ItermsController {
 		System.out.println(123);
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("itemsList", itemsList);
-		mav.setViewName("items/itemsList");
+		//mav.setViewName("test/jsp/items/itemsList");
+		mav.setViewName("login/jsp/login");
 		return mav;
 	}
-
-
 }

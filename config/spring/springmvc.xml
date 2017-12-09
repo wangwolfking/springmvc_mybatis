@@ -18,9 +18,15 @@
 	<!-- 可以扫描controller，service，..... -->
 	<context:component-scan base-package="com.yocaly.ssm.controller"></context:component-scan>
 	<mvc:annotation-driven></mvc:annotation-driven>
-	<bean
+	
+	<!-- 访问静态资源 -->
+     <mvc:resources location="/login/img/" mapping="/login/img/**"/>
+     <mvc:resources location="/login/js/" mapping="/login/js/**"/>
+     <mvc:resources location="/login/css/" mapping="/login/css/**"/>
+     <bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="prefix" value="/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	
 </beans>
