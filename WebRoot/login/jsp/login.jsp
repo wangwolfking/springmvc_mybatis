@@ -18,6 +18,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!--[if IE]>
 <script src="<%=basePath %>login/js/html5.js"></script>
 <![endif]-->
+<script type="text/javascript">
+function managerLogin(){
+	document.getElementById("loginForm").submit();
+}
+</script>
 </head>
 <body>
 		<div class="container demo-1">
@@ -26,7 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<canvas id="demo-canvas"></canvas>
 					<div class="logo_box">
 						<h3>欢迎你</h3>
-						<form action="#" name="f" method="post">
+						<form action="<%=basePath %>managerLogin.action" name="loginForm" id = "loginForm" method="post">
 							<div class="input_outer">
 								<span class="u_user"></span>
 								<input name="logname" class="text" style="color: #FFFFFF !important" type="text" placeholder="请输入账户">
@@ -35,7 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<span class="us_uer"></span>
 								<input name="logpass" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
 							</div>
-							<div class="mb2"><a class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</a></div>
+							<div class="mb2"><a class="act-but submit" href="javascript:managerLogin();" style="color: #FFFFFF">登录</a></div>
 						</form>
 					</div>
 				</div>
